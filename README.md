@@ -11,8 +11,9 @@ glyphs <- extract_legend_grobs(p)
 
 print(caption(template, glyphs), type = "latex")
 # \textb{Figure 1.} Those points \includegraphics{captionfigs/p_1.png} I'm
- making are important, nonetheless \includegraphics{captionfigs/p_2.png} \includegraphics{captionfigs/p_3.png} and 
- \includegraphics{captionfigs/p_4.png} have value too.
+# making are important, nonetheless \includegraphics{captionfigs/p_2.png} 
+# \includegraphics{captionfigs/p_3.png} and 
+# \includegraphics{captionfigs/p_4.png} have value too.
  
 print(caption(template, glyphs), type = "grid")
 

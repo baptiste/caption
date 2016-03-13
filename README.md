@@ -1,6 +1,8 @@
 # caption
 Inserting plotting symbols in figure captions.
 
+**NOTE: just ideas, not actually implemented.**
+
 
 
 ```

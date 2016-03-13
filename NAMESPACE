@@ -3,3 +3,4 @@
 export(caption)
 export(captionGrob)
 export(extract_legend_grobs)
+export(interleave_grobs)

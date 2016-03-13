@@ -4,10 +4,12 @@
 \alias{captionGrob}
 \title{Caption rendering with grid graphics}
 \usage{
-captionGrob(..., width = unit(4, "in"))
+captionGrob(..., lg = list(...), width = unit(4, "in"))
 }
 \arguments{
 \item{...}{grobs}
+
+\item{lg}{list of grobs}
 
 \item{width}{width of the caption as absolute grid unit}
 }

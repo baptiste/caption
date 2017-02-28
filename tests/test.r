@@ -3,13 +3,11 @@ library(gridExtra)
 library(ggplot2)
 library(gtable)
 
-p <- ggplot(ToothGrowth, aes(len, dose, shape=supp, colour=factor(dose))) + geom_point() +
-  theme(legend.position="bottom",
-        legend.background=element_rect(colour="black"))
+p <- ggplot(ToothGrowth, aes(len, dose, shape=supp, colour=factor(dose))) + geom_point()
 
 g <- extract_legend_grobs(p)
 
-grid.arrange(grobs=unlist(g$grobs, recursive=FALSE))
+grid.arrange(grobs=unlist(g$grobs, recursive=FALSE),nrow=1)
 
 tg <- lapply(c(expression(bold("Figure 1.")),"Those points","I'm making",
                "are important,", "nonetheless", "and", "have value too", ", I believe."),
@@ -26,4 +24,4 @@ bg <- list(tg[[1]], tg[[2]], pg[[1]], pg[[2]], tg[[3]], tg[[4]],
 
 test <- captionGrob(lg=bg, width = unit(5, "in"))
 grid.newpage()
-grid.arrange(p+theme(legend.position="none"), test, heights=c(5,1))
+grid.arrange(p+theme(legend.position="right"), test, heights=c(5,1))
